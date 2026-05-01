@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TiffinBox</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 🔝 NAVBAR -->
+<nav class="navbar">
+    <h2 class="logo">TiffinBox</h2>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="cart.html">Cart</a></li>
+    </ul>
+</nav>
+
+<!-- 🔐 LOGIN FORM -->
+<section class="login-container">
+    <div class="login-box">
+        <h2>Login</h2>
+
+        <input type="email" id="email" placeholder="Enter Email">
+        <input type="password" id="password" placeholder="Enter Password">
+
+        <button onclick="login()">Login</button>
+
+        <p>Don't have an account? <a href="signup.html">Signup</a></p>
+    </div>
+</section>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

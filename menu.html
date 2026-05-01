@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - TiffinBox</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 🔝 NAVBAR -->
+<nav class="navbar">
+    <h2 class="logo">TiffinBox</h2>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+    </ul>
+</nav>
+
+<!-- 🍱 MENU SECTION -->
+<section class="menu-preview">
+    <h2>Our Menu</h2>
+
+    <div class="menu-items">
+
+        <!-- ITEM 1 -->
+        <div class="card">
+            <img src="images/dal.jpg" alt="">
+            <h3>Dal Roti Combo</h3>
+            <p>₹80</p>
+            <button onclick="addToCart('Dal Roti', 80,'images/dal.jpg')">Add to Cart</button>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="card">
+            <img src="images/paneer.jpg" alt="">
+            <h3>Paneer Thali</h3>
+            <p>₹120</p>
+            <button onclick="addToCart('Paneer Thali', 120)">Add to Cart</button>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="card">
+            <img src="images/rice.jpg" alt="">
+            <h3>Rice Combo</h3>
+            <p>₹90</p>
+            <button onclick="addToCart('Rice Combo', 90)">Add to Cart</button>
+        </div>
+
+        <!-- ITEM 4 -->
+        <div class="card">
+            <img src="images/veg.jpg" alt="">
+            <h3>Veg Thali</h3>
+            <p>₹100</p>
+            <button onclick="addToCart('Veg Thali', 100)">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- 📞 FOOTER -->
+<footer>
+    <p>© 2026 TiffinBox</p>
+</footer>
+
+<!-- JS FILES -->
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+
+<!-- 🔐 LOGIN CHECK -->
+<script>
+    if (!localStorage.getItem("loggedIn")) {
+        window.location.href = "login.html";
+    }
+</script>
+
+</body>
+</html>

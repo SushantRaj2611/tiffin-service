@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delivery Tracking</title>
+</head>
+<body>
+  <h2>Delivery Boy Tracking ON</h2>
+
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+
+  <script>
+    const socket = io("http://localhost:5000");
+
+    if (navigator.geolocation) {
+      navigator.geolocation.watchPosition((position) => {
+        const data = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+
+        console.log("Sending location:", data);
+        socket.emit("updateLocation", data);
+      }, (error) => {
+        console.error("Error:", error);
+      });
+    } else {
+      alert("Geolocation not supported");
+    }
+  </script>
+</body>
+</html>

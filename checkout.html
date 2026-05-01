@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - TiffinBox</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 🔝 NAVBAR -->
+<nav class="navbar">
+    <h2 class="logo">TiffinBox</h2>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+    </ul>
+</nav>
+
+<!-- 🧾 CHECKOUT SECTION -->
+<section class="checkout-container">
+
+    <div class="checkout-box">
+        <h2>Delivery Details</h2>
+
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="text" id="address" placeholder="Address">
+        <input type="text" id="phone" placeholder="Phone Number">
+
+        <h3>Order Summary</h3>
+        <div id="order-items"></div>
+
+        <h3 id="total"></h3>
+
+        <button onclick="placeOrder()">Place Order</button>
+    </div>
+
+</section>
+
+<!-- JS FILES -->
+<script src="js/auth.js"></script>
+<script src="js/checkout.js"></script>
+
+<!-- 🔐 LOGIN CHECK -->
+<script>
+    if (!localStorage.getItem("loggedIn")) {
+        window.location.href = "login.html";
+    }
+</script>
+
+</body>
+</html>

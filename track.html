@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Track Order</title>
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<h2>🛵 Track Your Tiffin Delivery</h2>
+
+<div id="map"></div>
+
+<!-- Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+
+<!-- Socket.IO -->
+<script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+
+<script>
+  const socket = io("http://localhost:5000");
+
+  let map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 15,
+    center: { lat: 25.0, lng: 85.0 } // initial location (Bihar approx)
+  });
+
+  let marker = new google.maps.Marker({
+    position: { lat: 25.0, lng: 85.0 },
+    map: map,
+    title: "Delivery Bike"
+  });
+
+  socket.on("locationUpdate", (data) => {
+    const newPos = {
+      lat: data.lat,
+      lng: data.lng
+    };
+
+    console.log("Received:", newPos);
+
+    marker.setPosition(newPos);
+    map.setCenter(newPos);
+  });
+</script>
+
+</body>
+</html>

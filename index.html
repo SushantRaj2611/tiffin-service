@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiffin Service</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 🔝 NAVBAR -->
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.jpeg" alt="TiffinBox Logo" class="logo-img">
+            <h2>TiffinBox</h2>
+        </div>
+        <ul>
+                        <button id="darkModeToggle">🌙</button>
+
+            <li><a href="#">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li id="authSection"><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- 🏠 HERO SECTION -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Ghar Jaisa Swad, Roz!</h1>
+        <p>Healthy aur fresh tiffin directly aapke ghar tak.</p>
+        <button onclick="location.href='menu.html'">Order Now</button>
+    </div>
+    <div class="hero-img">
+        <img src="images/thali.jpg" alt="Food">
+    </div>
+</section>
+
+<!-- ⭐ FEATURES -->
+<section class="features">
+    <div class="feature-box">
+        <h3>🥗Healthy Food</h3>
+        <p>Ghar jaisa healthy aur hygienic khana.</p>
+    </div>
+
+    <div class="feature-box">
+        <h3>🚀Fast Delivery</h3>
+        <p>Time pe delivery guarantee.</p>
+    </div>
+
+    <div class="feature-box">
+        <h3>💸Affordable</h3>
+        <p>Pocket friendly plans available.</p>
+    </div>
+</section>
+
+<!-- 🍱 SAMPLE MENU -->
+<section class="menu-preview">
+    <h2>Today's Special</h2>
+
+    <div class="menu-items">
+
+        <div class="card">
+            <img src="images/dal roti.jpg" alt="Dal Roti">
+            <h3>Dal Roti Combo</h3>
+            <p>₹80</p>
+            <button onclick="addToCart('Dal Roti', 80,'images/dal roti.jpg')">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="images/paneer.jpg" alt="">
+            <h3>Paneer Thali</h3>
+            <p>₹120</p>
+            <button onclick="addToCart('Paneer Thali', 120,'images/paneer.jpg')">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="images/rice.jpg" alt="">
+            <h3>Rice Combo</h3>
+            <p>₹90</p>
+            <button onclick="addToCart('Rice Combo', 90,'images/rice.jpg')">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="images/veg thali.jpg" alt="">
+            <h3>Veg Thali</h3>
+            <p>₹100</p>
+            <button onclick="addToCart('Veg Thali', 100,'images/veg thali.jpg')">Add to Cart</button>
+
+    </div>
+    <div class="card">
+        <img src="images/bada.jpg" alt="">
+        <h3>vada</h3>
+        <p>₹150</p>
+        <button onclick="addToCart('bada', 150,'images/bada.jpg')">Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="images/dhosa.jpg" alt="">
+        <h3>Dhosa</h3>
+        <p>₹50</p>
+        <button onclick="addToCart('dhosa', 50,'images/dhosa.jpg')">Add to Cart</button>
+    </div>
+</section>
+
+<!-- 📞 FOOTER -->
+<footer>
+    <p>© 2026 TiffinBox | All Rights Reserved</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/cart.js" ></script>
+</body>
+</html>
